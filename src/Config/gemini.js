@@ -1,6 +1,6 @@
 const apiKey = "AIzaSyCSp_CkbS1SSRHcvdk4-E5wUtJi1_EYmW0"; // Place the API key here
 
-import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/generative-ai"; // Switch from require to import
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(apiKey);
 

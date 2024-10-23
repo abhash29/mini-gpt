@@ -12,15 +12,12 @@
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
-    /* Reduced font size */
     padding: 15px;
-    /* Reduced padding */
     color: #585858;
 }
 
 .main .nav img {
     width: 35px;
-    /* Adjusted icon size */
     border-radius: 50%;
 }
 
@@ -32,9 +29,9 @@
 .main .greet {
     margin: 40px 0px;
     font-size: 48px;
-    /* Reduced font size */
     color: #c4c7c5;
-    font-weight: 500;
+    font-weight: 700;
+    /* Increased font weight for better visibility */
     padding: 15px;
 }
 
@@ -46,26 +43,29 @@
 
 .main .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    /* Adjusted min size */
-    gap: 10px;
-    /* Reduced gap */
+    grid-template-columns: repeat(4, 1fr);
+    /* Set to 4 columns for large screens */
+    gap: 20px;
+    /* Increased gap for better spacing */
     padding: 10px;
 }
 
 .main .card {
-    height: 180px;
-    /* Reduced height */
-    padding: 10px;
+    height: 220px;
+    /* Card height */
+    padding: 20px;
+    /* Increased padding for card content */
     background: #f0f4f9;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Added shadow for depth */
 }
 
 .main .card img {
-    width: 30px;
-    /* Adjusted icon size */
+    width: 35px;
+    /* Icon size */
     padding: 5px;
     position: absolute;
     background-color: white;
@@ -76,8 +76,12 @@
 
 .main .card p {
     color: #585858;
-    font-size: 15px;
-    /* Reduced font size */
+    font-size: 18px;
+    /* Increased font size for better readability */
+    font-weight: 600;
+    /* Made text more bold */
+    line-height: 1.5;
+    /* Improved line height for readability */
 }
 
 .main .card:hover {
@@ -86,20 +90,14 @@
 
 .main-bottom {
     position: fixed;
-    /* Fixed the search bar at the bottom */
     bottom: 0;
     left: 50%;
-    /* Center align horizontally */
     transform: translateX(-50%);
     width: 100%;
-    /* Full width for responsiveness */
     max-width: 900px;
     padding: 10px 15px;
-    /* Adjusted padding */
     background-color: #ffffff;
-    /* Background to distinguish from main content */
     z-index: 100;
-    /* Bring to front */
 }
 
 .search-box {
@@ -111,7 +109,6 @@
     padding: 10px 20px;
     border-radius: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Add shadow for emphasis */
 }
 
 .search-box img {
@@ -126,14 +123,12 @@
     outline: none;
     padding: 8px;
     font-size: 16px;
-    /* Reduced font size */
 }
 
 .search-box div {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Adjusted gap */
 }
 
 .main .bottom-info {
@@ -177,6 +172,13 @@
     line-height: 1.8;
 }
 
+@media (max-width: 1024px) {
+    .main .cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* Adjust to 2 columns on medium screens */
+    }
+}
+
 @media (max-width: 600px) {
     .main .greet {
         font-size: 36px;
@@ -184,14 +186,15 @@
     }
 
     .main .cards {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        /* Adjust grid for small screens */
-        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        /* Responsive for small screens */
+        gap: 15px;
+        /* Slightly smaller gap */
     }
 
     .main .card {
-        height: 150px;
-        /* Further reduce card size */
+        height: 180px;
+        /* Slightly reduced height */
         padding: 10px;
     }
 
@@ -218,4 +221,4 @@
         width: 20px;
         /* Adjust icon size */
     }
-}y
+}

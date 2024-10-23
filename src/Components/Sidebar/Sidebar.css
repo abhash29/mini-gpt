@@ -1,0 +1,83 @@
+.sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    /* Increased width */
+    padding: 10px;
+    /* Added padding for better spacing */
+}
+
+.sidebar img {
+    width: 24px;
+    /* Slightly increased icon size for better visibility */
+}
+
+.sidebar .menu {
+    margin-left: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+    /* Align the menu icon to the start */
+}
+
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+    justify-content: flex-start;
+    /* Align content to the start */
+}
+
+.sidebar .recent {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    /* Make the recent title stand out */
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    justify-content: flex-start;
+    /* Align recent entries to the start */
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+}
+
+.sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    gap: 10px;
+    cursor: pointer;
+    justify-content: flex-start;
+    /* Align bottom items to the start */
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}
